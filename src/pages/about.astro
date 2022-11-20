@@ -1,47 +1,10 @@
 ---
-const pageTitle = "About Me";
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-const happy = true;
-const finished = false;
-const goal = 3;
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "About";
 ---
+<BaseLayout pageTitle={pageTitle}>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sint laudantium. Soluta, vero possimus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo adipisci pariatur, dolorem aliquid officia itaque esse soluta nostrum quae vitae fugiat suscipit hic error corrupti laboriosam sequi quos ad quam ea. Odit minima consequuntur enim aperiam animi placeat corrupti voluptas natus, beatae molestiae a ratione dolorem accusantium, quam quaerat rem neque adipisci blanditiis! Distinctio tempore quam quibusdam cupiditate impedit soluta blanditiis esse fugiat natus nostrum illo, consectetur accusamus veritatis. Dolore eveniet, repellat praesentium minima distinctio eius alias libero nemo porro quidem quaerat assumenda officia blanditiis. Rerum eligendi est incidunt, similique nostrum tenetur ratione aspernatur ipsa reiciendis excepturi in, assumenda sed ducimus temporibus. Delectus nam tempore distinctio sequi impedit quam placeat iusto explicabo fugiat laudantium. At delectus molestias suscipit ullam alias incidunt explicabo laboriosam.</p>
+</BaseLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-		<a href="/about/">About</a>
-		<h1>{pageTitle}</h1>
-		<p>Here are a few facts about me:</p>
-<ul>
-  <li>My name is {identity.firstName}.</li>
-  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-  {identity.hobbies.length >= 2 && 
-    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-  } 
-</ul>
-<p>My skills are:</p>
-<ul>
-  {skills.map((skill) => <li>{skill}</li>)}
-</ul>
-{happy && <p>I am happy to be learning Astro!</p>}
-
-{finished && <p>I finished this tutorial!</p>}
-
-{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	</body>
-</html>
+    
+		
